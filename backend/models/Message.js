@@ -6,7 +6,7 @@ const MessageSchema = new mongoose.Schema({
     required: true,
   },
   user: {
-    type: String, // Storing username
+    type: String, 
     required: true,
   },
   text: {
@@ -19,7 +19,6 @@ const MessageSchema = new mongoose.Schema({
   },
 });
 
-// Optimization: Create a compound index for efficient fetching and sorting by room
 MessageSchema.index({ room: 1, timestamp: 1 }); 
 
 module.exports = mongoose.model('Message', MessageSchema);
