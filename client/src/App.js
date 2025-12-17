@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import io from 'socket.io-client';
 import './App.css'; 
-const API_URL = 'https://chat-application-server-5xbj.onrender.com'; 
+const API_URL = 'https://chat-application-server-5xbj.onrender.com';
 let socket;
 
 const decodeJwt = (token) => {
